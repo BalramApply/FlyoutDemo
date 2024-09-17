@@ -18,5 +18,5 @@ This project demonstrates how to create a Flyout Page in .NET MAUI. A Flyout Pag
 
 ### 1. **Clone the repository**
    ```bash
-   git clone https://github.com/BalramAply/FlyoutDemo.git
-   cd BalramAply/FlyoutDemo
+   git clone https://github.com/BalramApply/FlyoutDemo.git
+   cd BalramApply/FlyoutDemo
