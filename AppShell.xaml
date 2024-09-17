@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FlyoutDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FlyoutDemo"
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutBackgroundImage="dark_cctv.png"
+    FlyoutBackgroundImageAspect="Fill"
+    Title="FlyoutDemo">
+
+    <Shell.FlyoutHeader>
+        <!--<Label Text="COLORS" FontSize="Large" HorizontalOptions="Center"
+               FontFamily="OpenSans_Semibold" FontAttributes="Bold"/>-->
+        <Image Source="header.png" Aspect="Fill"  HeightRequest="50"/>
+    </Shell.FlyoutHeader>
+    
+    <Shell.FlyoutFooter>
+        <!--<Label Text="Click the color to navigate" FontSize="Large" HorizontalOptions="Center"
+               FontFamily="OpenSans_Semibold" TextColor="Red" FontAttributes="Bold" MaxLines="22"/>-->
+        <Image Source="footer.png" Aspect="Fill"  HeightRequest="50"/>
+    </Shell.FlyoutFooter>
+    
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="50, *" Padding="7" RowDefinitions="28">
+                <Image Source="{Binding Icon}" Grid.Column="0"/>
+                <Label Text="{Binding Title}" FontFamily="OpenSans_SemiBold"
+                       FontSize="Large" FontAttributes="Bold" Grid.Column="1" VerticalOptions="Center" TextColor="White"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+    
+    <FlyoutItem Title="Home" Icon="dotnet_bot.png">
+        <ShellContent Title="Home"
+                      ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Red Page" Icon="letter_red.png">
+        <ShellContent Title="Red Page"
+                  ContentTemplate="{DataTemplate local:RedPage}" Route="RedPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Green Page" Icon="letter_red.png">
+        <ShellContent Title="Green Page"
+              ContentTemplate="{DataTemplate local:GreenPage}" Route="GreenPage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Blue Page" Icon="letter_red.png">
+        <ShellContent Title="Blue Page"
+          ContentTemplate="{DataTemplate local:BluePage}" Route="BluePage"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Yellow Page" Icon="letter_red.png">
+        <ShellContent Title="Yellow Page" Route="YellowPage">
+            <ContentPage BackgroundColor="Yellow">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                                     HorizontalOptions="Center" VerticalOptions="Center">
+                                     <Label Text="Yellow Page" TextColor="Black"
+                                            VerticalOptions="Center" HorizontalOptions="Center"
+                                            FontFamily="OpenSans_Semibold" FontSize="45" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Orange Page" Icon="letter_red.png">
+        <ShellContent Title="Orange Page"  Route="OrangePage">
+            <ContentPage BackgroundColor="Orange">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                                 HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Orange Page" TextColor="Black"
+                                        VerticalOptions="Center" HorizontalOptions="Center"
+                                        FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Cyan Page" Icon="letter_red.png">
+        <ShellContent Title="Cyan Page"  Route="CyanPage">
+            <ContentPage BackgroundColor="Cyan">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                             HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Cyan Page" TextColor="Black"
+                                    VerticalOptions="Center" HorizontalOptions="Center"
+                                    FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Black Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Black Page"  Route="BlackPage">
+            <ContentPage BackgroundColor="Black">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                             HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Black Page" TextColor="White"
+                                    VerticalOptions="Center" HorizontalOptions="Center"
+                                    FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Lime Page" Icon="letter_red.png">
+        <ShellContent Title="Lime Page"  Route="LimePage">
+            <ContentPage BackgroundColor="Lime">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                         HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Lime Page" TextColor="Black"
+                                VerticalOptions="Center" HorizontalOptions="Center"
+                                FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Magenta Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Magenta Page"  Route="MagentaPage">
+            <ContentPage BackgroundColor="Magenta">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                     HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Magenta Page" TextColor="Black"
+                            VerticalOptions="Center" HorizontalOptions="Center"
+                            FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Navy Page" Icon="letter_red.png">
+        <ShellContent Title="Navy Page"  Route="NavyPage">
+            <ContentPage BackgroundColor="Navy">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+                 HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Navy Page" TextColor="White"
+                        VerticalOptions="Center" HorizontalOptions="Center"
+                        FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Pink Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Pink Page"  Route="PinkPage">
+            <ContentPage BackgroundColor="Pink">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+             HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Pink Page" TextColor="Black"
+                    VerticalOptions="Center" HorizontalOptions="Center"
+                    FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Purple Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Purple Page"  Route="PurplePage">
+            <ContentPage BackgroundColor="Purple">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+         HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Purple Page" TextColor="White"
+                VerticalOptions="Center" HorizontalOptions="Center"
+                FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Salmon Page" Icon="letter_red.png">
+        <ShellContent Title="Salmon Page"  Route="SalmonPage">
+            <ContentPage BackgroundColor="Salmon">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+     HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Salmon Page" TextColor="Black"
+            VerticalOptions="Center" HorizontalOptions="Center"
+            FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Turquoise Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Turquoise Page"  Route="TurquoisePage">
+            <ContentPage BackgroundColor="Turquoise">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+ HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Turquoise Page" TextColor="Black"
+        VerticalOptions="Center" HorizontalOptions="Center"
+        FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Violet Page" Icon="letter_red.png">
+        <ShellContent Title="Violet Page"  Route="VioletPage">
+            <ContentPage BackgroundColor="Violet">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Violet Page" TextColor="Black"
+       VerticalOptions="Center" HorizontalOptions="Center"
+       FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Wheat Page" Icon="dotnet_bot.png">
+        <ShellContent Title="Wheat Page"  Route="WheatPage">
+            <ContentPage BackgroundColor="Wheat">
+                <VerticalStackLayout Spacing="15" Padding="0, 20"
+HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Wheat Page" TextColor="Black"
+       VerticalOptions="Center" HorizontalOptions="Center"
+       FontFamily="OpenSans_Semibold" FontSize="40" FontAttributes="Bold"/>
+                </VerticalStackLayout>
+            </ContentPage>
+        </ShellContent>
+    </FlyoutItem>
+</Shell>

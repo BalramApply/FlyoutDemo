@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlyoutDemo.MainPage"
+             Title="Home Page"
+             BackgroundColor="Lavender">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <Label
+                Text="Shell Flyout Demo!" TextColor="Purple"
+                VerticalOptions="Center" HorizontalOptions="Center"
+                FontFamily="OpenSans_Semibold" FontSize="35" FontAttributes="Bold"/>
+
+            <Label
+    Text="Use the Flyout menu at the top left to navigate" TextColor="MediumPurple"
+    VerticalOptions="Center" HorizontalOptions="Center"
+    FontFamily="OpenSans_Semibold" FontSize="24" FontAttributes="Bold"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
